@@ -1,0 +1,60 @@
+ifconfig  // liste des interfaces reseau sur ma machine
+ping   //
+netstat //  la liste des services en attente sur les ports donnees sur ma machine
+netstat | less
+netstat -natl // sur debian all listening ports
+netstat -ap tcp | grep -i "listen"
+netstat -pant | grep LISTEN // ne marche plus
+
+traceroute adresseip // par ou il est passe
+dig  // Identifier ip du serveur
+
+hosts /// ne marche pas
+/etc/hosts  
+cat /etc/hosts
+
+
+
+
+
+
+
+
+
+service sshd status
+service apache2 status
+service cups status
+sevice mysql status
+service apache2 start
+service apache2 stop
+service apache2 reload
+service apache2 force-reload
+service apache2 restart
+
+
+systemctl // sur linux equivant de service
+
+Homebrew // ou macport
+
+apt // debian
+
+yum // redat
+
+apt install apache2 // sur debian ubuntu
+
+df // display filesystem partition des disques, and disk space  usage
+df -h // pour les humains
+
+top // liste des process qui tournent en permanence
+htop // meuilleure presentation
+ps // liste des process a un moment donnee
+ps a
+
+kill
+kill -9
+
+
+
+
+
+
