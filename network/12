@@ -2,7 +2,7 @@
 
 # 12. Trouvez l’IP qui vous a été assignée par le serveur dhcp
 # COMMANDE :
-
+ifconfig -L en1 | grep "inet " | cut -d " " -f 2
 
 
 
@@ -11,7 +11,7 @@
 
 # Git : Figure out the server type
 # Deduction: 
-echo Server is of DHCP type
+# echo Server is of DHCP type
 # DHCP, Dynamic Host Configuration Protocol, is a client/server protocol 
 # that automatically provides an Internet Protocol (IP) host with its IP address 
 # and other related configuration information such as the subnet mask and default gateway

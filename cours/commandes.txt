@@ -13,7 +13,18 @@ hosts /// ne marche pas
 /etc/hosts  
 cat /etc/hosts
 
-
+scutil --dns // show DNS configuration.
+scutil --r adress //
+scutil --r nodename // 
+scutil --proxy  // show "proxy" configuration.
+scutil --nwi // show network information
+scutil --nc  // show VPN network configuration information. Use --nc help for full command list
+scutil --nc list
+scutil --nc show <service> 
+sudo scutil --set HostName <new host name>  // change the primary hostname of your Mac
+sudo scutil --set LocalHostName <new host name>  // change the Bonjour hostname of your Mac
+sudo scutil --set ComputerName <new name>  // change the computer name
+dscacheutil -flushcache  // Flush the DNS cache by typing:
 
 
 
