@@ -1,3 +1,23 @@
 #! /bin/sh
 
-# 9. Trouver l’IP Publique de 42.fr
+# 9. Trouver l’IP Publique de 42.fr / Find the external IP of 42.fr
+dig 42.fr
+42.fr.			3600	IN	A	163.172.250.13
+42.fr.			3600	IN	A	163.172.250.12
+
+dig +short 42.fr @resolver1.opendns.com 
+163.172.250.12
+163.172.250.13
+
+nslookup 42.fr 8.8.8.8
+Non-authoritative answer:
+Name:	42.fr
+Address: 163.172.250.13
+Name:	42.fr
+Address: 163.172.250.12
+
+# SORTIE :
+163.172.250.12
+163.172.250.13
+
+

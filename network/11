@@ -2,3 +2,12 @@
 
 # 11. Trouvez grâce au résultat de la commande précédente le nom et l’IP du matérielqui fait le lien 
 # entre vous (réseau local) et l’extérieur
+192.168.0.254 (192.168.0.254)  0.813 ms  1.080 ms  0.752 ms
+78.194.89.254 (78.194.89.254)  2.432 ms  4.375 ms  1.113 ms
+# DEDUCTION:
+192.168.0.254
+
+
+# git : 
+# name: nat-1\nip:   10.60.1.11
+# 'nat' stands for 'Network Address Translation'. nat1 is the device that makes the link between local network and outside world

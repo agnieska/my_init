@@ -1,3 +1,10 @@
 #! /bin/sh
 
-# 15. Faites pointer intra.42.fr sur l’adresse suivante46.19.122.85
+# 15. Faites pointer intra.42.fr sur l’adresse suivante 46.19.122.85
+ 
+# DEDUCTION
+# il faut ajouter une configuration locale dans le fichier /etc/hosts pour associer 
+# cad ajouter l'adresse ip  46.19.122.85 au contenu du fichier /etc/hosts et lui attribuer le nom "intra.42.fr"
+sudo echo '46.19.122.85  intra.42.fr' >> /etc/hosts
+
+# cat /etc/hosts

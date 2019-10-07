@@ -1,3 +1,23 @@
 #! /bin/sh
 
 # 10. Identifiez les différents appareils réseaux entre votre poste et le domaine slash16.org
+# COMMANDE: 
+traceroute slash16.org
+
+# traceroute: Warning: slash16.org has multiple addresses; using 13.225.30.132
+# traceroute to slash16.org (13.225.30.132), 64 hops max, 52 byte packets
+#  1  10.0.1.1 (10.0.1.1)  1.149 ms  0.820 ms  0.561 ms
+#  2  192.168.0.254 (192.168.0.254)  0.813 ms  1.080 ms  0.752 ms
+#  3  78.194.89.254 (78.194.89.254)  2.432 ms  4.375 ms  1.113 ms
+#  4  78.255.15.126 (78.255.15.126)  1.766 ms  1.506 ms  1.155 ms
+#  5  cri75-49m-1-v902.intf.nro.proxad.net (78.254.253.34)  1.349 ms  1.444 ms  1.120 ms
+#  6  fil75-49m-2-v900.intf.nro.proxad.net (78.254.253.166)  1.676 ms  2.219 ms  1.762 ms
+#  7  p11-49m-1-v806.intf.nro.proxad.net (78.254.242.94)  46.597 ms  45.806 ms  41.623 ms
+#  8  194.149.166.41 (194.149.166.41)  35.593 ms  32.616 ms  31.284 ms
+#  9  194.149.166.34 (194.149.166.34)  40.752 ms  41.903 ms  43.156 ms
+# 10  52.95.218.164 (52.95.218.164)  37.228 ms  46.182 ms  42.333 ms
+# 11  52.93.16.86 (52.93.16.86)  43.525 ms
+#     52.93.16.22 (52.93.16.22)  44.723 ms  45.944 ms
+# 12  52.93.16.183 (52.93.16.183)  40.408 ms
+#     52.93.16.181 (52.93.16.181)  43.738 ms
+#     52.93.16.179 (52.93.16.179)  45.021 ms

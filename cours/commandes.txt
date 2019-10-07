@@ -8,10 +8,12 @@ netstat -pant | grep LISTEN // ne marche plus
 
 traceroute adresseip // par ou il est passe
 dig  // Identifier ip du serveur
-
+???? trouver un hebergeur/provider d'un site
 hosts /// ne marche pas
 /etc/hosts  
 cat /etc/hosts
+
+
 
 
 

@@ -1,3 +1,19 @@
 #! /bin/sh
 
-# 7. Interrogez un serveur DNS externe sur le nom de domaineslash16.org(ex :google 8.8.8.8)
+# 7. Interrogez un serveur DNS externe (ex :google 8.8.8.8) sur le nom de domaine slash16.org
+# COMMANDE : 
+nslookup slash16.org 8.8.8.8
+
+
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	slash16.org
+Address: 52.85.22.77
+Name:	slash16.org
+Address: 52.85.22.2
+Name:	slash16.org
+Address: 52.85.22.224
+Name:	slash16.org
+Address: 52.85.22.16
