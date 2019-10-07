@@ -1,3 +1,5 @@
 #! /bin/sh
 
 # 14. Lancez en background la commande tail -f /var/log/syslog
+# COMMANDE 1 pour demarrer :
+tail -f /var/log/syslog > afile &

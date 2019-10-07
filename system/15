@@ -1,3 +1,8 @@
 #! /bin/sh
 
 # 15. Trouvez une commande qui permet de tuer le processus de la commande en back-ground
+# COMMANDE :
+kill %1
+kill $(jobs -p)
+kill -9 $(jobs -p)
+

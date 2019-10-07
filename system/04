@@ -1,4 +1,6 @@
 #! /bin/sh
 
-# 4. Quelle commande donne le temps depuis lequel votre système à été démarré ladernière fois ?
+# 4. Quelle commande donne le temps depuis lequel votre système à été démarré ladernière fois ? / What command gives you the time since your system was last booted?
+# COMMANDE :
+uptime
 

@@ -1,4 +1,9 @@
 #! /bin/sh
 
 # 13. Trouvez une commande qui permet, en temps réel, de trouver les processus encours d’exécution
+# COMMANDE 1 :
+top
+# COMMANDE 2 :
+sudo apt install htop
+htop
 

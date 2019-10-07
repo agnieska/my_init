@@ -1,3 +1,5 @@
 #! /bin/sh
 
-# 1. Dans quel fichier se trouve la version installée de votre Debian ?
+# 1. Dans quel fichier se trouve la version installée de votre Debian ? / In what file can you find the installed version of your Debian?
+# DEDUCTION : le fichier s'appelle /etc/debian_version
+ls -la  /etc/debian_version

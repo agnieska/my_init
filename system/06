@@ -1,3 +1,4 @@
 #! /bin/sh
 
-# 6. Donnez une commande pour redémarrer le service SSH
+# 6. Donnez une commande pour redémarrer le service SSH  / Name the command that reboots the SSH service.
+service ssh restart
