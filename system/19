@@ -1,3 +1,26 @@
 #! /bin/sh
 
-# 19. Listez les services qui se lancent automatiquement lorsque la machine boot etindiquez le nom donné à ce type de service
+# 19. Listez les services qui se lancent automatiquement lorsque la machine boot
+# SORTIE DE COMMANDE: systemctl list-units --type service --all
+
+UNIT                                 LOAD      ACTIVE   SUB     DESCRIPTION                                                       
+● apparmor.service                     not-found inactive dead    apparmor.service                                                  
+  apt-daily-upgrade.service            loaded    inactive dead    Daily apt upgrade and clean activities                            
+  apt-daily.service                    loaded    inactive dead    Daily apt download activities                                     
+● auditd.service                       not-found inactive dead    auditd.service                                                    
+● console-screen.service               not-found inactive dead    console-screen.service                                            
+  console-setup.service                loaded    active   exited  Set console font and keymap                                       
+  cron.service                         loaded    active   running Regular background program processing daemon                      
+  dbus.service                         loaded    active   running D-Bus System Message Bus  
+
+  ....
+  LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+55 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.
+
+
+# et indiquez le nom donné à ce type de service
+echo "ce sont les daemons"

@@ -1,3 +1,6 @@
 #! /bin/sh
 
-# 23. Expliquez comment se connecter en tant que ce nouvelle utilisateur. (En sessiongraphique et en session ssh)
+# 23. Expliquez comment se connecter en tant que ce nouveau utilisateur. (En sessiongraphique et en session ssh)
+# DEDUCTION : 
+echo "en session graphique : on lance la VM et on remplit les champs username/password"
+echo "en session ssh on ecrit ssh username@ipadress puis le mot de passe"

@@ -1,3 +1,4 @@
 #! /bin/sh
 
-# 24. Quelle commande permet de lister tout les packagesINSTALLÉSsur la machine ?
+# 24. Quelle commande permet de lister tout les packages INSTALLÉS sur la machine ?
+dpkg-query -l

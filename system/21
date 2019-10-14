@@ -1,3 +1,5 @@
 #! /bin/sh
 
 # 21. Listez tout les utilisateurs réels de la machine
+getent users {1000..65535} | cut -d ':' -f1
+getent passwd {1000..65535} | cut -d ':' -f1

@@ -1,3 +1,5 @@
 #! /bin/sh
 
 # 17. Trouvez une commande qui, en parallèle de la session graphique, permet de seconnecter en ssh sur la machine
+ssh username@ip_adress
+

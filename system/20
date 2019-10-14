@@ -1,3 +1,5 @@
 #! /bin/sh
 
 # 20. Listez tout les utilisateurs existants sur la machine
+cat /etc/users | cut -d ':' -f1
+cat /etc/passwd | cut -d ':' -f1
