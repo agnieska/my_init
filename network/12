@@ -3,8 +3,8 @@
 # 12. Trouvez l’IP qui vous a été assignée par le serveur dhcp
 # COMMANDE :
 ifconfig -L en1 | grep "inet " | cut -d " " -f 2
-
-
+# SORTIE :
+echo 10.0.1.4
 
 
 
