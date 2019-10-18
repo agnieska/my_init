@@ -1,8 +1,8 @@
 #! /bin/sh
 
-# 15. Trouvez une commande qui permet de tuer le processus de la commande en back-ground
-# COMMANDE :
+echo "15. Trouvez une commande qui permet de tuer le processus de la commande en back-ground"
+echo "15. COMMANDE : kill ou kill -9 (force) suivie ne numero du processus (job)"
 kill %1
 kill $(jobs -p)
 kill -9 $(jobs -p)
-
+kill -9 $SERVICE

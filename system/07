@@ -1,5 +1,6 @@
 #! /bin/sh
 
-# 7. Déterminez le PID du service SSHD / Figure out the PID of the SSHD service
-# COMMANDE
+echo "7. Déterminez le PID du service SSHD / Figure out the PID of the SSHD service"
+echo "7. COMMANDE: service ssh status | grep 'Main PID' | awk -F '[ ]' '{print $4}'"
 service ssh status | grep 'Main PID' | awk -F '[ ]' '{print $4}'
+ps aux | grep SSHD

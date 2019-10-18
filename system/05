@@ -1,7 +1,6 @@
 #! /bin/sh
-
-# 5. Donnez une commande qui détermine l’état du service SSH / Name the command that determines the state of the SSH service.
-# COMMANDE :
-service ssh status
-
-# systemctl status ssh.service  // aussi sur debian
+echo "5. Donnez une commande qui détermine l’état du service SSH."
+echo "5. COMMANDE : service ssh status"
+service ssh status  # marche pas sur virtual box
+systemctl status ssh.service # marche pas sur virtual box
+/etc/init.d/ssh status # marche pas sur virtual box

@@ -1,5 +1,6 @@
 #! /bin/sh
 
-# 12. Déterminez la taille exacte de chaque dossier de /var d’une manière humainement compréhensible suivi du chemin de celui-ci.
-# COMMANDE :
+echo "12. Déterminez la taille exacte de chaque dossier de /var, mode humainement compréhensible, suivi du chemin de celui-ci."
+echo "COMMANDE : du -hd1 (-h human -d  -s sort)"
 sudo du -sh /var/*
+sudo du -hd 1 -s /var/

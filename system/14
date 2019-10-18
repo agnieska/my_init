@@ -1,5 +1,6 @@
 #! /bin/sh
 
-# 14. Lancez en background la commande tail -f /var/log/syslog
-# COMMANDE 1 pour demarrer :
+echo "14. Lancez en background la commande tail -f /var/log/syslog"
+echo "14. COMMANDE: la meme commande suivie de & . "
+echo " Encore mieux c'est de la redirigier vers un fichier '> filename &' "
 tail -f /var/log/syslog > afile &

@@ -1,5 +1,8 @@
 #! /bin/sh
 
-# 2. Quelle commande permet de renommer votre système ?
-# COMMANDE : 
-hostname <newhostname>
+echo "2. Quelle commande permet de renommer votre système ?"
+echo "2. COMMANDE : hostname <newhostname>"
+hostname
+hostname toto
+hostname agndebian
+

@@ -1,5 +1,5 @@
 #! /bin/sh
 
-# 9. Quelle commande permet de savoir quelles personnes sont connectées sur le sys-tème ?  What command lets you know who is connected to the System?
-# COMMANDE :
+echo "9. Quelle commande permet de savoir quelles personnes sont connectées sur le sys-tème ?"
+echo "9. COMMANDE : who ou who -a"
 who -a

@@ -1,7 +1,9 @@
 #! /bin/sh
-
-# 11. Quelle commande permet d’afficher l’espace disponible et utilisé sur le système d’une manière humainement compréhensible ?
-# COMMANDE : 
-df -h /
-# Name the command that displays the available space left on the system?
+echo "11en. Name the command that displays the available space left on the system?"
+echo "11en. COMMANDE : df"
 df /
+echo "11fr. Quelle commande permet d’afficher l’espace disponible et utilisé sur le système d’une manière humainement compréhensible ?"
+echo "11fr. COMMANDE : df -h"
+df -h /
+
+

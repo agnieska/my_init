@@ -1,5 +1,5 @@
 #! /bin/sh
 
-# 3. Quel est le fichier à modifier pour rendre cela permanent ?
-# DEDUCTION c'est le fichier /etc/hostname
-ls -la /etc/hostname
+echo "3. Quel est le fichier à modifier pour rendre cela permanent ?"
+echo "3. DEDUCTION: c'est le fichier /etc/hostname"
+cat /etc/hostname

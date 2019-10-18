@@ -1,7 +1,9 @@
 #! /bin/sh
 
-# 8. Quel fichier contient les clés RSA des machines autorisées à se connecter via SSH ?
-# DEDUCTION : .ssh/authorized_keys
+echo "8. Quel fichier contient les clés RSA des machines autorisées à se connecter via SSH ?"
+echo "8. DEDUCTION: C'et le fichier .ssh/authorized_keys"
 
 ls -la ~/.ssh/authorized_keys
-# cat ~/.ssh/authorized_keys
+ls -la /$USER/.ssh/authorised_keys
+cat ~/.ssh/authorized_keys
+
