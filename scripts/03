@@ -1,19 +1,19 @@
+#!/bin/sh
 # 3. Jamais 2 sans 3. Réalise un script de ton choix.
 # A script which monitors the modifications made to the /etc/hosts file and
-# sends an e-mail to root if the new link is added or an existing link is modified. 
-# Create a scheduled task to run this script everyday at midnight.
-# from etc/crontab
+# sends an e-mail to root when file is modified. 
+# Create a scheduled task to run this script everyday at 0h42
 
-#!/bin/bash
 
-MD5SUM='cat /root/hostsum'
-NEWSUM='md5sum /etc/hosts | cut -d " " -f 1'
+# add this line to /etc/cron.d/hosts_check
+echo "42 0 * * *   root    sh /root/hosts_check.sh" > /etc/cron.d/hosts_check
+service cron restart
 
-if [ "$MD5SUM" != "$NEWSUM" ]
-then
-	md5sum /etc/hosts | cut -d " " -f 1 > /root/hostsum
-	mail -s "The file crontab was modified" root@localhost.com < /etc/hosts
+cat > /root/hosts_check.sh << EOF
+#!/bin/sh
+diff /etc/hosts /etc/hosts.backup
+if [ $? -ne 0 ] ; then
+	diff /etc/hosts /etc/hosts.backup | mail -s "The file hosts was modified" root@localhost.com
+	cp /etc/hosts /etc/hosts.backup
 fi
-
-# add this line to /etc/hosts
-# 0 0    0 * 0-6   root    sh /root/hosts_check.sh
+EOF
