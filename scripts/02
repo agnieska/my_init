@@ -1,21 +1,9 @@
 
 #!/bin/bash
-
-# old
-# 2. Write a script which updates all the package sources, then all the packages, and then logs everything in
-# a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.
-
-echo 'apt-get update && apt-get upgrade >> /var/log/update_script.log' >> ~/apt_update.sh
-
-# enter the following line to add it to crontab once and schedule the script at 4 am once per week:
-# echo '0  4    * * 1   root    sh ~/apt_update.sh' | crontab
-# crontab -l to check current crontabs and crontab -e to edit them
-
-
-# new
-# 2. Réalisez un script qui permet de supprimer un user LOGUÉ sur la machine
-echo "Which user would you like to tej ?"
-read username
+echo "2. Réalisez un script qui permet de supprimer un user LOGUÉ sur la machine"
+echo "2. SCRIPT: Which user would you like to delete ?"
+read username # debian
+users # mac
 
 red=`tput setaf 1`
 green=`tput setaf 2`
@@ -25,10 +13,10 @@ check_exist=`cat /etc/passwd | grep $username`
 if [ "$check_exist" != "$NULL" ]; then
 	sudo passwd -l $username
 	if [ "$(pgrep -u $username)" != "$NULL" ]; then
-		sudo kill -9 $(pgrep -u $username)
+		# sudo kill -9 $(pgrep -u $username)
 	fi
-	sudo userdel -r $username
-	echo "${green}USER WAS SUCCESSFULLY TEJ :-)"
+	# sudo userdel -r $username
+	echo "${green}USER WAS SUCCESSFULLY delete :-)"
 else
 	echo "${red}user doesn't exist"
 fi
