@@ -1,15 +1,14 @@
 #! /bin/sh
 
-# 12. Trouvez l’IP qui vous a été assignée par le serveur dhcp
-# COMMANDE :
+echo "\n12. Trouvez l’IP qui vous a été assignée par le serveur DHCP"
+echo "\nCOMMANDE : ifconfig -L en1 | grep 'inet '' | cut -d ' ' -f 2"
 ifconfig -L en1 | grep "inet " | cut -d " " -f 2
-# SORTIE :
-echo 10.0.1.4
+echo "SORTIE : 10.0.1.4"
 
 
 
 
-# Git : Figure out the server type
+# Old 12: Figure out the server type
 # Deduction: 
 # echo Server is of DHCP type
 # DHCP, Dynamic Host Configuration Protocol, is a client/server protocol 

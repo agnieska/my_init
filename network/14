@@ -1,10 +1,8 @@
 #! /bin/sh
 
-# 14. Quel est le fichier contenant les entrées locales DNS ?
-
-# DEDUCTION
-
-echo  /etc/hosts
+echo "\n14. Quel est le fichier contenant les entrées locales DNS ?"
+echo "\nDEDUCTION: /etc/hosts"
+cat  /etc/hosts
 
 # cat /etc/hosts
 # 127.0.0.1	localhost

@@ -1,44 +1,10 @@
 #! /bin/sh
 
-# 8. Trouver chez quel hébergeur est le site de Slash16
-# COMMANDE 1 :
-dig slash16.org
-# Got answer:
-QUESTION SECTION:
-slash16.org.			IN	A
-ANSWER SECTION:
-slash16.org.		1713	IN	A	13.225.30.132
-slash16.org.		1713	IN	A	13.225.30.198
-slash16.org.		1713	IN	A	13.225.30.145
-slash16.org.		1713	IN	A	13.225.30.164
-SERVER: 10.0.1.1#53(10.0.1.1)
-
-
-# COMMANDE 2 :
-dig NS  slash16.org
-# Got answer:
-QUESTION SECTION:
-slash16.org.			IN	NS
-ANSWER SECTION:
-slash16.org.		172675	IN	NS	ns-1236.awsdns-26.org.
-slash16.org.		172675	IN	NS	ns-144.awsdns-18.com.
-slash16.org.		172675	IN	NS	ns-1989.awsdns-56.co.uk.
-slash16.org.		172675	IN	NS	ns-686.awsdns-21.net.
-SERVER: 10.0.1.1#53(10.0.1.1)
-
-# COMMANDE 3 :
-nslookup slash16.org | grep
-host slash16.org
-# Got answer:
-slash16.org has address 13.225.30.145
-slash16.org has address 13.225.30.164
-slash16.org has address 13.225.30.198
-slash16.org has address 13.225.30.132
-slash16.org mail is handled by 1 aspmx.l.google.com.
-slash16.org mail is handled by 10 alt3.aspmx.l.google.com.
-slash16.org mail is handled by 10 alt4.aspmx.l.google.com.
-slash16.org mail is handled by 5 alt1.aspmx.l.google.com.
-slash16.org mail is handled by 5 alt2.aspmx.l.google.com.
-
-# DEDUCTION :
-# j'en deduis que c'est google pour e-mail et aws pour le site et le domain
+echo "\n8. Trouver chez quel hébergeur est le site de Slash16"
+echo "\nCOMMANDE: 'dig NS slash16.org' -> affiche awsdns"
+echo "COMMANDE: 'host slash16.org' -> affiche mail is handled by google "
+echo "\nDEDUCTION : j'en deduis que c'est GOOGLE pour e-mail et AWS pour le site et le domain"
+echo "\ndig NS slash16.org"
+dig  NS slash16.org
+echo "\nhost slash16.org "
+host slash16.org 

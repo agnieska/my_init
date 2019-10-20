@@ -1,5 +1,5 @@
 #! /bin/sh
 
-# Identifiez la gateway par défaut dans la table de routage
-# COMMANDE:
-netstat -nr | grep default | head -1 | awk '{print $2}'
+echo "\n4. Identifiez la gateway par défaut dans la table de routage"
+echo "\nCOMMANDE: netstat -r | grep default | head -1 | awk '{print $/2}' "
+netstat -nr | grep default | head -1 | awk '{print $1 " " $2}'

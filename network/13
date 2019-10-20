@@ -1,9 +1,5 @@
 #! /bin/sh
 
-# 13. Grâce a la question précédente et au reverse DNS retrouvez le nom de votre host
-cat  /etc/hosts
-# SORTIE :
-127.0.0.1	localhost
-255.255.255.255	broadcasthost
-::1             localhost
-fe80::1%lo0	localhost
+echo "\n13. Grâce a la question précédente et au reverse DNS retrouvez le nom de votre host"
+echo "COMMANDE: host < IP-adress >"
+echo "COMMANDE: dig -x < IP-adress >"

@@ -1,84 +1,13 @@
 #! /bin/sh
 
-# Récupérez le path complet du fichier dans lequel est écrit l’adresse IP du serveurDNS que vous utilisez
-
-# DEDUCTION : 
-echo 'The file etc/rsolv.config contains the IP address of the used DNS server nameserver 10.0.1.1'
-echo 'It points to /var/run/resolv.conf'
-echo 'This file /var/run/resolv.conf is automatically generated at each restart of machine'
-ls -la /etc/rsolv.config
-# lrwxr-xr-x  1 root  wheel  22 Jan  3  2018 /etc/resolv.conf -> ../var/run/resolv.conf
+echo "\n6. Récupérez le path complet du fichier dans lequel est écrit l’adresse IP du serveurDNS que vous utilisez"
+echo "\nDEDUCTION :" 
+echo 'The file etc/resolv.conf  points to another file /var/run/resolv.conf'
+echo 'The second file is automatically generated at each restart of machine (daemon)'
+echo "It contains the IP address of the used DNS server nameserver 10.0.1.1\n"
+ls -la /etc/resolv.conf
 ls -la /var/run/resolv.conf
-# -rw-r--r--  1 root  daemon  354 Oct  6 19:01 /var/run/resolv.conf
-
-
-# macOS Notice
-# This file is not consulted for DNS hostname resolution, address
-# resolution, or the DNS query routing mechanism used by most
-# processes on this system.
-# To view the DNS configuration used by this system, use: scutil --dns  SEE ALSO  dns-sd(1), scutil(8)
-# DNS configuration
-
-resolver #1
-  nameserver[0] : 10.0.1.1
-  if_index : 7 (en1)
-  flags    : Request A records
-  reach    : 0x00020002 (Reachable,Directly Reachable Address)
-
-resolver #2
-  domain   : local
-  options  : mdns
-  timeout  : 5
-  flags    : Request A records
-  reach    : 0x00000000 (Not Reachable)
-  order    : 300000
-
-resolver #3
-  domain   : 254.169.in-addr.arpa
-  options  : mdns
-  timeout  : 5
-  flags    : Request A records
-  reach    : 0x00000000 (Not Reachable)
-  order    : 300200
-
-resolver #4
-  domain   : 8.e.f.ip6.arpa
-  options  : mdns
-  timeout  : 5
-  flags    : Request A records
-  reach    : 0x00000000 (Not Reachable)
-  order    : 300400
-
-resolver #5
-  domain   : 9.e.f.ip6.arpa
-  options  : mdns
-  timeout  : 5
-  flags    : Request A records
-  reach    : 0x00000000 (Not Reachable)
-  order    : 300600
-
-resolver #6
-  domain   : a.e.f.ip6.arpa
-  options  : mdns
-  timeout  : 5
-  flags    : Request A records
-  reach    : 0x00000000 (Not Reachable)
-  order    : 300800
-
-resolver #7
-  domain   : b.e.f.ip6.arpa
-  options  : mdns
-  timeout  : 5
-  flags    : Request A records
-  reach    : 0x00000000 (Not Reachable)
-  order    : 301000
-
-DNS configuration (for scoped queries)
-
-resolver #1
-  nameserver[0] : 10.0.1.1
-  if_index : 7 (en1)
-  flags    : Scoped, Request A records
-  reach    : 0x00020002 (Reachable,Directly Reachable Address)
+echo "cat /var/run/resolv.conf"
+cat /var/run/resolv.conf
 
 

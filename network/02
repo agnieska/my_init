@@ -1,7 +1,13 @@
 #! /bin/sh
 
-# COMMANDE 1: Identifiez et affichez les caractéristiques de l’interface Ethernet :
-ifconfig -L en0
-# COMMANDE 2:  Indiquez l’adresse de Broadcast
-ifconfig -L en1 | grep "broadcast " | cut -d " " -f 6
-# COMMANDE 3:  Indiquez toutes les adresses IP qui font partie du même sous-réseau
+echo "\n2a. Identifiez et affichez les caractéristiques de l’interface Ethernet :"
+echo "\nCOMMANDE: ifconfig en0 "
+ifconfig en0
+echo "\n2b. Identifiez l'adresse IP de l’interface Ethernet :"
+echo "\nCOMMANDE: ifconfig en0 | grep 'ether'"
+ifconfig en0 | grep "ether" | cut -d " " -f 2
+echo "\n2c. Indiquez l’adresse de Broadcast"
+echo "\nCOMMANDE: ifconfig en1 | grep 'broadcast' | cut -d ' ' -f 6"
+ifconfig en1 | grep "broadcast" | cut -d " " -f 6
+echo "\n2d. Indiquez toutes les adresses IP qui font partie du même sous-réseau"
+echo "\nCOMMANDE:  ... "

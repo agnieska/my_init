@@ -1,6 +1,8 @@
 #! /bin/sh
 
-# COMMANDE: Récupérez la liste des interfaces réseau de la machine sans afficher 
-# aucun détail pour ces interfaces. Vraiment juste la liste des noms.
+echo "1. Récupérez la liste des interfaces réseau de la machine sans afficher"
+echo "   aucun détail pour ces interfaces. Vraiment juste la liste des noms."
+echo "\nCOMMANDE: ifconfig -l"
 ifconfig -l
-# ifconfig -l | tr " " "\n"
+echo "\nADD FORMAT: ifconfig -l | tr ' ' '\\\n' "
+ifconfig -l | tr " " "\n"

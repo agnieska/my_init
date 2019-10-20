@@ -1,5 +1,5 @@
 #! /bin/sh
 
-# Identifiez l’adresse MAC de la carte Wi-Fi
-# COMMANDE:
-ifconfig en1 | grep "ether " | cut -d " " -f 2
+echo '\n3. Identifiez l’adresse MAC de la carte Wi-Fi'
+echo '\nCOMMANDE: ifconfig en1 | grep "ether" | cut -d " " -f 2\n'
+ifconfig en1 | grep "ether" | cut -d " " -f 2

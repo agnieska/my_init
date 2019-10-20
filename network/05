@@ -1,5 +1,6 @@
 #! /bin/sh
 
-# Identifiez l’IP du serveur DNS qui répond sur le domaine suivant :slash16.org
-# COMMANDE:
-dig slash16.org | grep SERVER | awk '{print $3}' | awk -F '[()]' '{print $2}'
+echo "\n5. Identifiez l’IP du serveur DNS qui répond sur le domaine suivant : slash16.org"
+echo "\nCOMMANDE: dig slash16.org  ou nslookup slash16.org \n"
+dig slash16.org | grep SERVER | awk '{print $2 $3}' | awk -F '#' '{print $1}'
+nslookup slash16.org | grep Server | awk '{print $1 $2}'
