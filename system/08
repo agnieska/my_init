@@ -6,4 +6,3 @@ echo "8. DEDUCTION: C'et le fichier .ssh/authorized_keys"
 ls -la ~/.ssh/authorized_keys
 ls -la /$USER/.ssh/authorised_keys
 cat ~/.ssh/authorized_keys
-

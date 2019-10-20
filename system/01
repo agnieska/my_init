@@ -2,5 +2,5 @@
 
 echo "1. Dans quel fichier se trouve la version installée de votre Debian ?"
 echo "1. DEDUCTION : le fichier s'appelle /etc/debian_version ou etc/version"
-cat  /etc/debian_version
-cat ../etc/version
+cat  /etc/debian_version  #sur debian classique
+# cat ../etc/version # sur docker2linux

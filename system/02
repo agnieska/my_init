@@ -3,6 +3,7 @@
 echo "2. Quelle commande permet de renommer votre système ?"
 echo "2. COMMANDE : hostname <newhostname>"
 hostname
+su # passer en root
 hostname toto
-hostname agndebian
-
+hostname agdebian
+exit # sortir de root
