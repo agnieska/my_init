@@ -2,10 +2,8 @@
 #!/bin/bash
 echo "2. Réalisez un script qui permet de supprimer un user LOGUÉ sur la machine"
 
-
-
 suicider='whoami'
-if ["$current" != "agneska" && "$current" != "root"]; then
+if ["$suicider" != "agneska" && "$suicider" != "root"]; then
 	echo "Try to delete $suicider"
 	su -
 	if [ "$(pgrep -u $suicider)" != "$NULL" ]; then
