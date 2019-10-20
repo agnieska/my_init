@@ -1,22 +1,36 @@
 
 #!/bin/bash
 echo "2. Réalisez un script qui permet de supprimer un user LOGUÉ sur la machine"
-echo "2. SCRIPT: Which user would you like to delete ?"
-read username # debian
-users # mac
 
-red=`tput setaf 1`
-green=`tput setaf 2`
-reset=`tput sgr0`
 
-check_exist=`cat /etc/passwd | grep $username`
-if [ "$check_exist" != "$NULL" ]; then
-	sudo passwd -l $username
-	if [ "$(pgrep -u $username)" != "$NULL" ]; then
-		# sudo kill -9 $(pgrep -u $username)
+
+suicider='whoami'
+if ["$current" != "agneska" && "$current" != "root"]; then
+	echo "Try to delete $suicider"
+	su -
+	if [ "$(pgrep -u $suicider)" != "$NULL" ]; then
+		kill -9 $(pgrep -u $suicider)
 	fi
-	# sudo userdel -r $username
-	echo "${green}USER WAS SUCCESSFULLY delete :-)"
+	userdel -r $suicider
+	echo "USER $suicider WAS SUCCESSFULLY delete :-)"
 else
-	echo "${red}user doesn't exist"
+	echo "SUPER USER $suicider can not be deleted by this script"
 fi
+
+# echo "Which user would you like to tej"
+# read users 
+# red=`tput setaf 1`
+# green=`tput setaf 2`
+# reset=`tput sgr0`
+
+# check_exist=`cat /etc/passwd | grep $username`
+# if [ "$check_exist" != "$NULL" ]; then
+# 	sudo passwd -l $username
+# 	if [ "$(pgrep -u $username)" != "$NULL" ]; then
+# 		# sudo kill -9 $(pgrep -u $username)
+# 	fi
+# 	# sudo userdel -r $username
+# 	echo "${green}USER WAS SUCCESSFULLY delete :-)"
+# else
+# 	echo "${red}user doesn't exist"
+# fi
